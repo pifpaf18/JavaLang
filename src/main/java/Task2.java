@@ -12,6 +12,10 @@ public class Task2 {
         for (int i = 0; i < array.length; i++) {
             int r = gen.nextInt(length);
 
+            while(r == i) {
+                r = gen.nextInt(length);
+            }
+
             result[i] = array[r];
 
             array[r] = array[length-1];
